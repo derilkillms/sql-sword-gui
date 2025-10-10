@@ -61,8 +61,6 @@ Silakan tambahkan module scanning (payloads, taming false positives), fitur prox
 
 # Lisensi
 
-Direkomendasikan: **MIT License**. Contoh header singkat yang bisa kamu masukkan di `LICENSE`:
-
 ```
 MIT License
 
@@ -88,6 +86,7 @@ Tool ini ditujukan untuk tujuan penelitian keamanan **dengan izin**. Jangan guna
 
 * Author: Peluru Kertas
 * Project: SQL Sword — SQL Injection Automation
+
 
 
 
