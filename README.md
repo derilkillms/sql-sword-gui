@@ -7,43 +7,44 @@
 
 # Fitur utama
 
+* UI berbasis `tkinter` / `ttkbootstrap` (GUI ringan)
 * Scanner *union-based* SQLi (struktur project untuk dikembangkan)
 * Database Explorer
 * Mudah diperluas (modular): tambahkan payload, modul teknik, logging
 
 ---
 
+---
 
-## Cara instal (direkomendasikan)
+# Persyaratan
+
+Gunakan Python 3.8+. Dependensi minimal disimpan di `requirements.txt`:
+
+```
+requests>=2.28.0
+ttkbootstrap>=1.6.0
+# Optional: Pillow untuk manipulasi gambar
+# Pillow>=9.0.0
+```
+
+**Catatan platform**
+
+* Linux (Debian/Ubuntu): jika `tkinter` belum tersedia, install `python3-tk`.
+* Windows/macOS: biasanya sudah terpasang bersama Python installer resmi.
+
+---
+
+# Instalasi cepat
 
 ```bash
+# (opsional) buat virtual environment
 python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS / Linux
+# activate (.venv\Scripts\activate untuk Windows)
 source .venv/bin/activate
 
 pip install --upgrade pip
 pip install -r requirements.txt
-# jika pakai opsi tambahan:
-# pip install "requests[socks]" tqdm
 ```
-
----
-
-## Rekomendasi versi Python
-
-Gunakan **Python 3.8+** (disarankan 3.10 atau 3.11) agar fitur concurrency dan library modern berjalan mulus.
-
----
-
-## Catatan keamanan & jaringan
-
-* Jika aplikasi melakukan banyak request paralel, pertimbangkan menambahkan timeouts dan retry logic (`requests` + `requests.adapters.HTTPAdapter` + `Retry`) agar tidak menggantung dan lebih robust.
-* Untuk SOCKS proxy (`requests[socks]`) sistem harus mempunyai `PySocks` yang akan diinstall otomatis lewat extras.
-
----
-
 
 ---
 
@@ -84,8 +85,6 @@ Tool ini ditujukan untuk tujuan penelitian keamanan **dengan izin**. Jangan guna
 
 * Author: Peluru Kertas
 * Project: SQL Sword — SQL Injection Automation
-
----
 
 
 
